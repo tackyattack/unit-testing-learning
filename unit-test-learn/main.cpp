@@ -4,7 +4,9 @@
 //
 //  Created by HENRY BERGIN on 10/1/17.
 //  Copyright © 2017 Henry Bergin. All rights reserved.
-//
+
+// How you can organize unit tests: maybe each class has a unit test class? Keep all the unit tests in a separate
+// location, all together. That way it makes it easier for packaging.
 
 #include <iostream>
 #include <stdio.h>
