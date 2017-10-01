@@ -7,9 +7,30 @@
 //
 
 #include <iostream>
+#include <stdio.h>
+#include "gtest/gtest.h"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
+bool myUnit(int a)
+{
+    return 0;
+}
+
+TEST(myUnitTest, FalseCheck) {
+    EXPECT_FALSE(myUnit(1));
+}
+
+TEST(a_test, fail_test)
+{ // fails on purpose
+    EXPECT_TRUE(0);
+    ASSERT_EQ(1.0, 0.0);
+}
+
+int main(int argc, char **argv) {
+    
+    ::testing::InitGoogleTest(&argc, argv);
+    RUN_ALL_TESTS();
+    
     std::cout << "Hello, World!\n";
+    
     return 0;
 }
